@@ -54,7 +54,7 @@ export function AuthScreen({
       <div className="flex min-h-screen items-center justify-center p-6">
         <div
           aria-live="assertive"
-          className="glass-panel w-full max-w-sm rounded-2xl border border-white/0.08 p-6 text-center"
+          className="glass-panel w-full max-w-sm rounded-2xl border border-white/8 p-6 text-center"
           role="alert"
         >
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-red-500/20 bg-red-500/10">
@@ -81,7 +81,7 @@ export function AuthScreen({
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-white/0.08 bg-subtle text-emerald-500">
+          <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-white/8 bg-subtle text-emerald-500">
             <KeyRound aria-hidden="true" className="h-8 w-8" />
           </div>
           <h1 className="mb-2 font-light text-2xl text-white tracking-tight">
@@ -94,7 +94,7 @@ export function AuthScreen({
 
         {/* Form */}
         <form
-          className="glass-panel rounded-2xl border border-white/0.08 p-6"
+          className="glass-panel rounded-2xl border border-white/8 p-6"
           onSubmit={handleSubmit}
         >
           <div className="mb-4">
@@ -110,7 +110,7 @@ export function AuthScreen({
                 className="absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-neutral-400"
               />
               <input
-                className="w-full rounded-xl border border-white/0.08 bg-neutral-900 px-4 py-3 pl-11 text-white transition-colors placeholder:text-neutral-600 focus:border-emerald-500/50 focus:outline-none"
+                className="w-full rounded-xl border border-white/8 bg-neutral-900 px-4 py-3 pl-11 text-white transition-colors placeholder:text-neutral-600 focus:border-emerald-500/50 focus:outline-none"
                 id="email"
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@correo.com"

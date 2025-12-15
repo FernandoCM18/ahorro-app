@@ -63,12 +63,12 @@ export function GoalWidget({ goal, currentAmount, onClick }: GoalWidgetProps) {
 
   return (
     <button
-      className="group flex w-full cursor-pointer items-center justify-between rounded-2xl border border-white/0.08 bg-subtle/20 p-4 text-left transition-all duration-300 hover:bg-subtle/40"
+      className="group flex w-full cursor-pointer items-center justify-between rounded-2xl border border-white/8 bg-subtle/20 p-4 text-left transition-all duration-300 hover:bg-subtle/40"
       onClick={onClick}
       type="button"
     >
       <div className="flex items-center gap-4">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/0.08 bg-neutral-900 text-neutral-400">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/8 bg-neutral-900 text-neutral-400">
           <IconComponent aria-hidden="true" className="h-4 w-4" />
         </div>
         <div>

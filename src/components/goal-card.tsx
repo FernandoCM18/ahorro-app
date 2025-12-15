@@ -25,7 +25,7 @@ export function GoalCard({ goal, currentAmount }: GoalCardProps) {
   return (
     <div className="group relative mb-4 cursor-pointer">
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-neutral-800 to-black opacity-40 blur-xl transition duration-700 group-hover:opacity-60" />
-      <div className="glass-panel relative flex h-40 w-full flex-col justify-between rounded-2xl border border-white/0.08 p-6 transition-all duration-500 group-hover:translate-y-[-2px] group-hover:border-neutral-700">
+      <div className="glass-panel relative flex h-40 w-full flex-col justify-between rounded-2xl border border-white/8 p-6 transition-all duration-500 group-hover:translate-y-[-2px] group-hover:border-neutral-700">
         {/* Header of Card */}
         <div className="flex items-start justify-between">
           <div>

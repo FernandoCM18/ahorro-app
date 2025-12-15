@@ -60,7 +60,7 @@ export function HistoryItemMenu({
             }}
           />
           <div
-            className="absolute top-10 right-0 z-20 min-w-[140px] rounded-xl border border-white/0.08 bg-neutral-900 p-1 shadow-lg"
+            className="absolute top-10 right-0 z-20 min-w-[140px] rounded-xl border border-white/8 bg-neutral-900 p-1 shadow-lg"
             role="menu"
           >
             {onEdit ? (

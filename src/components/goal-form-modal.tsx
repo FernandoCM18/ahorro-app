@@ -117,7 +117,7 @@ export function GoalFormModal({
       />
 
       {/* Modal */}
-      <div className="glass-panel fade-in zoom-in-95 relative w-full max-w-sm animate-in rounded-2xl border border-white/0.08 p-6 duration-200">
+      <div className="glass-panel fade-in zoom-in-95 relative w-full max-w-sm animate-in rounded-2xl border border-white/8 p-6 duration-200">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
           <h2 className="font-medium text-lg text-white">{title}</h2>
@@ -147,7 +147,7 @@ export function GoalFormModal({
               className={`w-full rounded-xl border ${
                 errors.nombre
                   ? "border-red-500/50 focus:border-red-500"
-                  : "border-white/0.08 focus:border-emerald-500/50"
+                  : "border-white/8 focus:border-emerald-500/50"
               } bg-neutral-900 px-4 py-3 text-white transition-colors placeholder:text-neutral-600 focus:outline-none`}
               id="nombre"
               onChange={(e) => {
@@ -176,7 +176,7 @@ export function GoalFormModal({
               Icono
             </label>
             <select
-              className="w-full cursor-pointer appearance-none rounded-xl border border-white/0.08 bg-neutral-900 px-4 py-3 text-white transition-colors focus:border-emerald-500/50 focus:outline-none"
+              className="w-full cursor-pointer appearance-none rounded-xl border border-white/8 bg-neutral-900 px-4 py-3 text-white transition-colors focus:border-emerald-500/50 focus:outline-none"
               id="icono"
               onChange={(e) => setIcono(e.target.value)}
               value={icono}
@@ -207,7 +207,7 @@ export function GoalFormModal({
                 className={`w-full rounded-xl border ${
                   errors.metaTotal
                     ? "border-red-500/50 focus:border-red-500"
-                    : "border-white/0.08 focus:border-emerald-500/50"
+                    : "border-white/8 focus:border-emerald-500/50"
                 } bg-neutral-900 px-4 py-3 pl-8 text-white transition-colors placeholder:text-neutral-600 focus:outline-none`}
                 id="metaTotal"
                 min="0.01"
@@ -235,7 +235,7 @@ export function GoalFormModal({
             <input
               aria-describedby="esPrincipal-description"
               checked={esPrincipal}
-              className="h-4 w-4 rounded border border-white/0.08 bg-neutral-900 text-emerald-500 focus:ring-0 focus:ring-offset-0"
+              className="h-4 w-4 rounded border border-white/8 bg-neutral-900 text-emerald-500 focus:ring-0 focus:ring-offset-0"
               id="esPrincipal"
               onChange={(e) => setEsPrincipal(e.target.checked)}
               type="checkbox"

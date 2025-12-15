@@ -32,7 +32,7 @@ export function HistoryList({
         <h2 className="mb-4 px-1 font-medium text-sm text-white tracking-tight">
           {title}
         </h2>
-        <div className="rounded-2xl border border-white/0.08 border-dashed p-4 text-center">
+        <div className="rounded-2xl border border-white/8 border-dashed p-4 text-center">
           <p className="text-neutral-500 text-sm">No hay registros aún</p>
           <p className="mt-1 text-neutral-600 text-xs">
             Agrega tu primer ahorro para comenzar

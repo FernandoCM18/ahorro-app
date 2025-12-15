@@ -137,7 +137,7 @@ export function AddRecordModal({
       />
 
       {/* Modal */}
-      <div className="glass-panel fade-in zoom-in-95 relative w-full max-w-sm animate-in rounded-2xl border border-white/0.08 p-6 duration-200">
+      <div className="glass-panel fade-in zoom-in-95 relative w-full max-w-sm animate-in rounded-2xl border border-white/8 p-6 duration-200">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
           <h2 className="font-medium text-lg text-white">{title}</h2>
@@ -172,7 +172,7 @@ export function AddRecordModal({
                 className={`w-full rounded-xl border ${
                   errors.monto
                     ? "border-red-500/50 focus:border-red-500"
-                    : "border-white/0.08 focus:border-emerald-500/50"
+                    : "border-white/8 focus:border-emerald-500/50"
                 } bg-neutral-900 px-4 py-3 pl-8 text-white transition-colors placeholder:text-neutral-600 focus:outline-none`}
                 id="monto"
                 min="0.01"
@@ -204,7 +204,7 @@ export function AddRecordModal({
               Alcancía (opcional)
             </label>
             <select
-              className="w-full cursor-pointer appearance-none rounded-xl border border-white/0.08 bg-neutral-900 px-4 py-3 text-white transition-colors focus:border-emerald-500/50 focus:outline-none"
+              className="w-full cursor-pointer appearance-none rounded-xl border border-white/8 bg-neutral-900 px-4 py-3 text-white transition-colors focus:border-emerald-500/50 focus:outline-none"
               id="meta"
               onChange={(e) => setMetaId(e.target.value || null)}
               value={metaId || ""}
@@ -232,7 +232,7 @@ export function AddRecordModal({
               className={`w-full rounded-xl border ${
                 errors.fecha
                   ? "border-red-500/50 focus:border-red-500"
-                  : "border-white/0.08 focus:border-emerald-500/50"
+                  : "border-white/8 focus:border-emerald-500/50"
               } bg-neutral-900 px-4 py-3 text-white transition-colors focus:outline-none`}
               id="fecha"
               onChange={(e) => {
@@ -260,7 +260,7 @@ export function AddRecordModal({
               Descripción (opcional)
             </label>
             <input
-              className="w-full rounded-xl border border-white/0.08 bg-neutral-900 px-4 py-3 text-white transition-colors placeholder:text-neutral-600 focus:border-emerald-500/50 focus:outline-none"
+              className="w-full rounded-xl border border-white/8 bg-neutral-900 px-4 py-3 text-white transition-colors placeholder:text-neutral-600 focus:border-emerald-500/50 focus:outline-none"
               id="descripcion"
               onChange={(e) => setDescripcion(e.target.value)}
               placeholder="Ej: Ahorro semanal"

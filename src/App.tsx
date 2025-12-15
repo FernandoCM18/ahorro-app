@@ -217,7 +217,7 @@ export default function App() {
                 goal={primaryGoal}
               />
             ) : (
-              <div className="mb-4 rounded-2xl border border-white/0.08 border-dashed p-6 text-center">
+              <div className="mb-4 rounded-2xl border border-white/8 border-dashed p-6 text-center">
                 <p className="mb-2 text-neutral-500 text-sm">
                   No tienes una meta principal
                 </p>

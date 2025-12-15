@@ -62,7 +62,7 @@ export function HistoryItem({
       >
         <div className="flex items-center gap-4">
           <div
-            className={`flex h-10 w-10 items-center justify-center rounded-full border border-white/0.08 bg-black transition-colors ${
+            className={`flex h-10 w-10 items-center justify-center rounded-full border border-white/8 bg-black transition-colors ${
               isPositive
                 ? "text-emerald-500 group-hover:border-emerald-500/20 group-hover:text-emerald-400"
                 : "text-red-500 group-hover:border-red-500/20 group-hover:text-red-400"

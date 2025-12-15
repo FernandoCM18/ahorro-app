@@ -45,7 +45,7 @@ export function GoalList({
       </div>
 
       {otherGoals.length === 0 ? (
-        <div className="rounded-2xl border border-white/0.08 border-dashed p-4 text-center">
+        <div className="rounded-2xl border border-white/8 border-dashed p-4 text-center">
           <p className="text-neutral-500 text-sm">
             No tienes otras alcancías aún
           </p>

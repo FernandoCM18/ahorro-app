@@ -40,7 +40,7 @@ export function QuickActions({
       {actions.map(({ icon: Icon, label, ariaLabel, onClick, hoverColor }) => (
         <button
           aria-label={ariaLabel}
-          className="group flex h-16 flex-col items-center justify-center gap-2 rounded-2xl border border-white/0.08 bg-subtle/20 transition-all duration-300 hover:border-neutral-700 hover:bg-subtle"
+          className="group flex h-16 flex-col items-center justify-center gap-2 rounded-2xl border border-white/8 bg-subtle/20 transition-all duration-300 hover:border-neutral-700 hover:bg-subtle"
           key={label}
           onClick={onClick}
           type="button"
