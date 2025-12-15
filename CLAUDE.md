@@ -104,9 +104,31 @@ VITE_SUPABASE_ANON_KEY=<tu-anon-key>
 
 ## Convenciones de Código
 
+### Naming Conventions
+- **Archivos:** Todos los archivos deben usar **kebab-case**
+  - Componentes: `balance-hero.tsx`, `add-record-modal.tsx`
+  - Hooks: `use-auth.ts`, `use-records.ts`
+  - Tests: `app.test.tsx`
+- **Componentes:** Funciones y tipos en PascalCase
+- **Hooks:** Prefijados con `use` (camelCase en el nombre de función)
+- **Variables y funciones:** camelCase
+
+### TypeScript
+- Usar `type` en lugar de `interface` para consistencia
+- Definir tipos explícitos para props y return values
+- Usar `unknown` en lugar de `any` cuando el tipo sea desconocido
+- Preferir type unions sobre enums cuando sea posible
+
+### React
 - Componentes funcionales con hooks
-- Nombres de componentes en PascalCase
-- Hooks personalizados prefijados con `use`
+- Hooks solo al nivel superior del componente
+- Dependency arrays completos y correctos en hooks
+- Usar `key` con IDs únicos en listas (no índices)
+
+### Arquitectura
+- **NO usar barrel files (index.ts)** - Importar directamente desde archivos
+  - ❌ Evitar: `export { Component } from './component'`
+  - ✅ Preferir: Importar directamente `import { Component } from './components/component'`
 - Tests junto al código que prueban o en `/tests`
 - Código formateado automáticamente por Ultracite/Biome
 - Pre-commit hook ejecuta tests y formatea código
