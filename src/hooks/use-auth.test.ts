@@ -240,11 +240,9 @@ describe("useAuth", () => {
         error: null,
       });
 
-      let authChangeCallback:
-        | ((event: string, session: unknown) => void)
-        | null = null;
+      let authChangeCallback: unknown = null;
 
-      mockOnAuthStateChange.mockImplementation((callback) => {
+      mockOnAuthStateChange.mockImplementation((callback: unknown) => {
         authChangeCallback = callback;
         return {
           data: { subscription: { unsubscribe: mockUnsubscribe } },
@@ -259,7 +257,12 @@ describe("useAuth", () => {
 
       // Simulate auth state change
       const newSession = createMockSession({ email: "newemail@test.com" });
-      authChangeCallback?.("SIGNED_IN", newSession);
+      if (authChangeCallback && typeof authChangeCallback === "function") {
+        (authChangeCallback as (event: string, session: unknown) => void)(
+          "SIGNED_IN",
+          newSession
+        );
+      }
 
       await waitFor(() => {
         expect(result.current.session).toEqual(newSession);

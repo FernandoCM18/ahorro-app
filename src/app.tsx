@@ -15,6 +15,8 @@ import { type Goal, useGoals } from "./hooks/use-goals";
 import { type Record, useRecords } from "./hooks/use-records";
 import supabase from "./lib/supabase";
 
+type RecordFormData = Omit<Record, "id" | "user_id" | "created_at">;
+
 export default function App() {
   const { user, loading: authLoading, signIn } = useAuth();
   const {
@@ -132,12 +134,7 @@ export default function App() {
     setGoalModalOpen(true);
   };
 
-  const handleRecordSubmit = async (data: {
-    monto: number;
-    descripcion: string;
-    meta_id: string | null;
-    fecha: string;
-  }) => {
+  const handleRecordSubmit = async (data: RecordFormData) => {
     if (editingRecord) {
       await updateRecord(editingRecord.id, data);
       setEditingRecord(null);

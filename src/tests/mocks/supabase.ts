@@ -66,7 +66,7 @@ export const createSupabaseMock = (options?: {
       signInWithOtp: vi.fn().mockResolvedValue({ error: authError }),
       signOut: vi.fn().mockResolvedValue({ error: authError }),
     },
-    from: vi.fn((table: string) => {
+    from: vi.fn(() => {
       const builder = createMockQueryBuilder();
 
       // Override single() to return the configured data/error
@@ -76,11 +76,18 @@ export const createSupabaseMock = (options?: {
 
       // Make select() also resolvable for queries without .single()
       const originalSelect = builder.select;
-      builder.select = vi.fn((...args) => {
-        const result = originalSelect(...args);
+      builder.select = vi.fn((...args: unknown[]) => {
+        // Call the original select method and capture its return value
+        const originalResult = (
+          originalSelect as (...args: unknown[]) => unknown
+        )(...args);
         // Add a then() method to make it thenable
+        const resultObj =
+          typeof originalResult === "object" && originalResult !== null
+            ? originalResult
+            : {};
         return {
-          ...result,
+          ...resultObj,
           then: (resolve: (value: unknown) => unknown) =>
             Promise.resolve({ data: queryData, error: queryError }).then(
               resolve
